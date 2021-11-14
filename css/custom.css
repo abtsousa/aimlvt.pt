@@ -1,0 +1,334 @@
+/* footer {
+  max-height:100px;
+  background-image: url('/img/banner.svg');
+  background-repeat: no-repeat;
+  background-size: auto 80px;
+  background-position: left top;
+} */
+
+.aim {
+  background:url('../img/aim.svg') 0 0 no-repeat !important;
+  background-size: 100% !important;
+  display:inline-block;
+  width: calc(1.35rem * 3.31/1.75);
+  height:1.35rem; /* your image height */
+  text-indent:-99999em;
+  /*overflow:hidden;*/
+}
+
+.sessions {
+  font-family: "Poiret One";
+}
+
+.alert-secondary {
+  color: #196369;
+  background-color: #ccfbff;
+  border-color: #b8f9ff;
+}
+
+/*faq*/
+.faq-icon::before {
+  display:none;
+}
+
+.faq-title {
+  cursor: pointer;
+}
+
+.faq-title .faq-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+  	content: "\f152 ";
+}
+
+.faq-title[aria-expanded="true"] .faq-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+	content: "\f150 ";
+}
+
+#faqOne {
+  width:100%;
+}
+
+/* abbr for phones */
+abbr[title] {
+  border-bottom: 0;
+  text-decoration: none;
+}
+abbr[title]:before 
+{
+  border-bottom: 0;
+  text-decoration: none;
+  content: attr(title) " (";
+}
+
+abbr[title]:after
+{
+  content: ")";
+}
+
+@media screen and (min-width: 992px)
+{
+  abbr[title]
+  {
+     text-decoration: underline dotted;
+     cursor:help;
+  }
+
+   abbr[title]:before
+   {
+      content: "";
+   }
+
+   abbr[title]:after
+   {
+      content: "";
+   }
+}
+
+/*hero height change for banner */
+ #info.hero {
+  min-height: calc(80vh - 59px) !important;
+/*  min-height: auto !important; */
+  height:auto !important;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%);
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-block {
+  border-width: 3px;
+}
+
+.social-link-messenger {
+  background: #0078FF;
+}
+
+.smaller {font-size: 60%;}
+
+.lined-sm::after {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 0.5rem auto;
+  background: #248C93;
+}
+
+a[role=button]:hover {
+  text-decoration-line: none;
+}
+
+a.spamspan {
+  color: inherit;
+  font-weight: bold;
+}
+
+
+#team .content {
+  margin: 0 -50px;
+  padding: 0 50px;
+}
+
+#team img, #vantagens .hovershadow {
+  transition: all .5s ease;
+  transform: scale(0.95);
+}
+
+#vantagens .hovershadow {width:100%; height:80%; }
+
+#team img:hover, #vantagens .hovershadow:hover{
+  box-shadow: 0 0.6rem 1.1rem rgba(0, 0, 0, 0.175) !important;
+  transition: all .5s ease;
+  transform: scale(1);
+  overflow:visible;
+}
+
+.hover-1-content {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.175);
+}
+
+/* offset half column */
+@media (min-width: 992px) {
+  .offset-lg-1_5 {
+      margin-left: 12.5%;
+  }
+}
+
+/* Show more */
+.content {
+  background: white;
+  z-index: 1;
+  position:relative;
+  height:auto;
+  overflow: hidden;
+}
+
+.content::before, .content::after, .content {
+  -webkit-transition: height 300ms ease;
+  -moz-transition: height 300ms ease;
+  transition: height 300ms ease;
+}
+
+.content.masked{
+  height: 200px;
+}
+
+.content.open{
+  padding-bottom: 30px;
+  height: 100%;
+}
+
+.content.masked::before {
+  content: "Ver a equipa \25bc";
+  position: absolute;
+  bottom:10px;
+  left:0;
+  width:100%;
+  z-index: 3;
+  text-align: center;
+  font-family: "Roboto Condensed";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #555;
+}
+
+.content.masked:hover::before {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content.masked::after {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  z-index: 2;
+  background: -webkit-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%);
+  background: -moz-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%);
+  background: -o-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%);
+  background: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%);
+}
+
+/* .content.open::before {
+  content: "Ver menos \25b2";
+  position: absolute;
+  bottom:10px;
+  left:0;
+  width:100%;
+  z-index: 3;
+  text-align: center;
+  font-family: "Roboto Condensed", ;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #555;
+}
+
+.content.open:hover::before {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content.open::after {
+  content: none;
+} */
+
+/*
+*
+* ==========================================
+* IMAGE CAPTION HOVER
+* ==========================================
+*
+*/
+
+/* DEMO GENERAL ============================== */
+.hover {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60%;
+  min-height: 40vh;
+}
+
+.hover > img {
+  min-height: 40vh;
+  object-fit: cover;
+}
+
+.hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+.hover img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-content {
+  position: relative;
+  z-index: 99;
+}
+
+
+/* DEMO 1 ============================== */
+.hover-1 img {
+  width: 105%;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  transition: all 0.3s;
+}
+
+.hover-1-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  transition: all 0.4s;
+}
+
+.hover-1 .hover-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) { 
+  .hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+  }
+  .hover-1:hover .hover-1-content {
+    bottom: 2rem;
+  }
+}
+
+.hover-1:hover .hover-1-description {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-1:hover img {
+  left: 0;
+}
+
+.hover-1:hover .hover-overlay {
+  opacity: 0;
+}
