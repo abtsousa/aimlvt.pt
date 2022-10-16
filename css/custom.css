@@ -324,7 +324,7 @@ a.spamspan {
 
 
 /* DEMO 1 ============================== */
-.hover-1 img {
+.hover-1 img.hover-bg {
   width: 105%;
   position: absolute;
   top: 0;
