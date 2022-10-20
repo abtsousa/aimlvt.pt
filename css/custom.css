@@ -291,12 +291,12 @@ a.spamspan {
   overflow: hidden;
   position: relative;
   padding-bottom: 60%;
-  min-height: 40vh;
+  min-height: 50vh;
 }
 
 .hover > img {
-  min-height: 40vh;
   object-fit: cover;
+  min-height: 50vh;
 }
 
 .hover-overlay {
@@ -351,8 +351,17 @@ a.spamspan {
     transition: all 0.4s;
     opacity: 0;
   }
+
   .hover-1:hover .hover-1-content {
     bottom: 2rem;
+  }
+
+  h3.hover-1-title {
+    font-size: 2.2rem;
+  }
+
+  h5.hover-1-title {
+    font-size: 1.35rem;
   }
 }
 
@@ -371,8 +380,4 @@ a.spamspan {
 
 .hover-1:hover .hover-1-content {
   background: rgba(0, 0, 0, 0.3);
-}
-
-h3.hover-1-title {
-  font-size: 2.2rem;
 }
