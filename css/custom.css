@@ -6,6 +6,21 @@
   background-position: left top;
 } */
 
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px; /* adjust height as needed */
+  overflow: hidden; /* hide any parts of the image that exceed the banner */
+}
+
+.banner img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto; /* set the width to auto to maintain the aspect ratio */
+  height: auto; /* set the height to auto to maintain the aspect ratio */
+}
+
 .aim {
   background:url('../img/aim.svg') 0 0 no-repeat !important;
   background-size: 100% !important;
