@@ -1,0 +1,3 @@
+This folder contained personal, individualized and serialized Certificates for various AIM LVT events.
+
+Since their content is meant to be for the recipients' eyes only, they have been removed from this public repo.
